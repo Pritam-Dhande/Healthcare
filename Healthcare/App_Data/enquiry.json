@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "EnquiryDate": "19-05-2025 13:39:02 PM",
+    "FullName": "Pritam D",
+    "Email": "pritam@gmail.com",
+    "MobileNumber": "9876543211",
+    "Product": "IVF Software",
+    "Message": "Enquiry test Message"
+  },
+  {
+    "id": 2,
+    "EnquiryDate": "19-05-2025 13:41:45 PM",
+    "FullName": "Sahil",
+    "Email": "sahil@gmail.com",
+    "MobileNumber": "9638521477",
+    "Product": "Telemedicine Solutions",
+    "Message": "Software Enquiry"
+  }
+]

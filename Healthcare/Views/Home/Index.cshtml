@@ -1,0 +1,425 @@
+﻿@model Healthcare.Models.HomePageViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <style>
+        .nice-select form-control {
+            padding-top: 10px !important;
+           
+        }
+
+        .form-control {
+            text-align: left !important;
+        }
+    </style>
+}
+
+<!-- Start Rehabilitation Center Slider Area -->
+<div id="home" class="rehabilitation-center-slider-area">
+    <div class="swiper rehabilitation-center-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="rehabilitation-center-slider-item" style="background-image: url('/Content/assets/images/main-slides/slides-bg5.jpg')">
+                    <div class="container">
+                        <div class="rehabilitation-center-slider-content">
+                            <h1>Empowering Healthcare<span>Through Innovation</span></h1>
+                            <ul class="slider-btn-list">
+                                <li>
+                                    <a href="#aboutus" class="default-btn2">
+                                        <span>Learn More</span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#contactus" class="default-btn2">
+                                        <i class='bx bxs-phone'></i>
+                                        <span>Contact Us</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Rehabilitation Center Slider Area -->
+<!-- Start Shop Area -->
+<div id="products" class="shop-area pt-100 pb-100">
+    <div class="container">
+        <div class="section-title title-optional-wrap text-center">
+            <h2>TOP-QUALITY HEALTHCARE PRODUCT <br> FOR YOUR NEEDS</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-6">
+                <div class="shop-item">
+                    <div class="image">
+                        <a href="javascript:void(0)">
+                            <img src="~/content/assets/images/Products/Product-1.jpg" alt="image">
+                        </a>
+                        <div class="cart-btn">
+                            <a href="javascript:void(0)">
+                                <i class="bx bxs-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a href="javascript:void(0)">IVF Software</a>
+                        </h3>
+                        <div class="price">RS 9999</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="shop-item">
+                    <div class="image">
+                        <a href="javascript:void(0)">
+                            <img src="/content/assets/images/Products/Product-2.jpg" alt="image">
+                        </a>
+                        <div class="cart-btn">
+                            <a href="javascript:void(0)">
+                                <i class="bx bxs-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a href="product-details.html">Telemedicine Solution</a>
+                        </h3>
+                        <div class="price">₹ 9999</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="shop-item">
+                    <div class="image">
+                        <a href="product-details.html">
+                            <img src="/content/assets/images/Products/Product-3.jpg" alt="image">
+                        </a>
+                        <div class="cart-btn">
+                            <a href="cart.html">
+                                <i class="bx bxs-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a href="product-details.html">Hospital Information System</a>
+                        </h3>
+                        <div class="price">₹ 9999</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="shop-item">
+                    <div class="image">
+                        <a href="product-details.html">
+                            <img src="/content/assets/images/Products/Product-4.jpg" alt="image">
+                        </a>
+                        <div class="cart-btn">
+                            <a href="cart.html">
+                                <i class="bx bxs-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a href="product-details.html">Mobile App Development</a>
+                        </h3>
+                        <div class="price">₹ 9999</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Shop Area -->
+<!-- Start About Area -->
+<section id="aboutus" class="about-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="about-content">
+                    <span class="sub-title">
+                        <i class="flaticon-hashtag-symbol"></i>
+                        About Us
+                    </span>
+                    <h3>About Our Healthcare IT Company</h3>
+                    <p>
+                        At Healthcare IT, we are committed to transforming healthcare through innovative technology.
+                        As a trusted Healthcare IT solutions provider, we specialize in developing secure, scalable,
+                        and user-centric software that empowers healthcare organizations to deliver better patient outcomes,
+                        streamline operations, and stay compliant with evolving industry standards.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="about-list">
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Innovate Boldly
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Act with Integrity
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Collaborate Deeply
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="about-list">
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Secure Relentlessly
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Pursue Excellence
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Customer-Centricity
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="about-info p-lg-0">
+                                <h5>Our mission</h5>
+                                <p>
+                                    To empower healthcare organizations with innovative, secure, and intelligent technology
+                                    solutions that enhance care delivery, improve patient outcomes, and drive operational excellence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="about-image">
+                    <img src="~/content/assets/images/about/choice.png" alt="image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End About Area -->
+<!-- Start RC Contact Area -->
+<div id="contactus" class="rc-contact-area ptb-100">
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-5">
+            <div class="col-lg-6 col-md-12">
+                <div class="rc-contact-content">
+                    <span class="sub"># Contact Info</span>
+                    <h2>Have questions? Reach out to us, and we'll get back to you soon.</h2>
+                    <h5>Office Hours</h5>
+                    <ul class="time-list">
+                        <li>
+                            <span>Monday - Thursday</span>
+                            <span>8:00AM - 8:00PM</span>
+                        </li>
+                        <li>
+                            <span>Friday</span>
+                            <span>8:00AM - 7:00PM</span>
+                        </li>
+                        <li>
+                            <span>Saturday</span>
+                            <span>8:00AM - 5:00PM</span>
+                        </li>
+                        <li>
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <h5>Fill Contact Details</h5>
+                <h4 id="result" class="mt-3"></h4>
+                  
+                @using (Html.BeginForm("SaveContact", "Home", FormMethod.Post, new { id = "frmContactForm", @class = "rc-contact-form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.ContactForm.Name, new { @class = "form-control", placeholder = "Enter Name" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.ContactForm.Email, new { @class = "form-control", placeholder = "Enter Email" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                @Html.TextAreaFor(m => m.ContactForm.Message, new { @class = "form-control", placeholder = "Enter Message" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.Message, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <button type="submit" class="default-btn2">
+                                <i class='bx bxs-calendar'></i>
+                                <span>Send Details</span>
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End RC Contact Area -->
+<!-- Start Contact Area -->
+<section class="contact-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">
+                <i class="flaticon-hashtag-symbol"></i>
+                Enquiry Now
+            </span>
+            <h2>Drop Us Message for Any Query</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+        </div>
+
+        <div class="contact-form">
+            <h4 id="result-enq" class="mt-3"></h4>
+            @using (Html.BeginForm("SaveEnquiry", "Home", FormMethod.Post, new { id = "frmEnquiryForm", @class = "rc-contact-form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="col-lg-6 mt-2">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.EnquiryForm.FullName, new { @class = "form-control", @placeHolder = "Enter Full Name" })
+                            @Html.ValidationMessageFor(m => m.EnquiryForm.FullName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.EnquiryForm.Email, new { @class = "form-control", @placeHolder = "Enter Email" })
+                            @Html.ValidationMessageFor(m => m.EnquiryForm.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-2">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.EnquiryForm.MobileNumber, new { @class = "form-control", @placeHolder = "Enter Mobile Number" })
+                            @Html.ValidationMessageFor(m => m.EnquiryForm.MobileNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-2">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.EnquiryForm.Product,
+                            new SelectList(new[]
+                            {
+                                new { Value = "", Text = "Select a Product" },
+                                new { Value = "IVF Software", Text = "IVF Software" },
+                                new { Value = "Telemedicine Solutions", Text = "Telemedicine Solutions" },
+                                new { Value = "Hospital Information System", Text = "Hospital Information System" },
+                                new { Value = "Mobile App Development", Text = "Mobile App Development" }
+                            }, "Value", "Text"),
+                            new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.EnquiryForm.Product, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 mt-2">
+                        <div class="form-group">
+                            @Html.TextAreaFor(m => m.EnquiryForm.Message, new { @class = "form-control", @placeHolder = "Enter Message" })
+                            @Html.ValidationMessageFor(m => m.EnquiryForm.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 mt-2">
+                        <button type="submit" class="default-btn2">
+                            <i class='bx bxs-calendar'></i>
+                            <span>Send Message</span>
+                        </button>
+                      
+                    </div>
+                </div>
+            }
+             
+        </div>
+
+    </div>
+</section>
+<!-- End Contact Area -->
+ 
+@section Scripts {
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+       $(function () {
+            $("#frmContactForm").submit(function (e) {
+                e.preventDefault();
+
+                if (!$(this).valid())
+                    return;
+
+                $.ajax({
+                    url: '@Url.Action("SaveContact", "Home")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            $("#result").html("<div style='color:green'>" + response.message + "</div>");
+                            $("#frmContactForm")[0].reset();
+                        } else {
+                            $("#result").html("<div style='color:red'>All fields are required.</div>");
+                            // Optional: display server-side validation errors (already handled by MVC client-side by default)
+                        }
+                    },
+                    error: function () {
+                        $("#result").html("<div style='color:red'>An error occurred.</div>");
+                    }
+                });
+            });
+
+           $("#frmEnquiryForm").submit(function (e) {
+                e.preventDefault();
+
+                if (!$(this).valid())
+                    return;
+
+                $.ajax({
+                    url: '@Url.Action("SaveEnquiry", "Home")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            $("#result-enq").html("<div style='color:green'>" + response.message + "</div>");
+                            $("#frmEnquiryForm")[0].reset();
+                        } else {
+                            $("#result-enq").html("<div style='color:red'>All fields are required.</div>");
+                            // Optional: display server-side validation errors (already handled by MVC client-side by default)
+                        }
+                    },
+                    error: function () {
+                        $("#result-enq").html("<div style='color:red'>An error occurred.</div>");
+                    }
+                });
+            });
+        });
+         
+    </script>
+}

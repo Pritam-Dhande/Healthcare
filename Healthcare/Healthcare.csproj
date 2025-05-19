@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{955FD3C9-3EFE-4D70-89EC-034BE4F789F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Healthcare</RootNamespace>
+    <AssemblyName>Healthcare</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44304</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactForm.cs" />
+    <Compile Include="Models\EnquiryForm.cs" />
+    <Compile Include="Models\HomePageViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\css\animate.min.css" />
+    <Content Include="Content\assets\css\bootstrap.min.css" />
+    <Content Include="Content\assets\css\boxicons.min.css" />
+    <Content Include="Content\assets\css\countrySelect.min.css" />
+    <Content Include="Content\assets\css\dark.css" />
+    <Content Include="Content\assets\css\flaticon-two.css" />
+    <Content Include="Content\assets\css\flaticon.css" />
+    <Content Include="Content\assets\css\magnific-popup.min.css" />
+    <Content Include="Content\assets\css\meanmenu.css" />
+    <Content Include="Content\assets\css\nice-select.min.css" />
+    <Content Include="Content\assets\css\odometer.min.css" />
+    <Content Include="Content\assets\css\owl.carousel.min.css" />
+    <Content Include="Content\assets\css\owl.theme.default.min.css" />
+    <Content Include="Content\assets\css\owl.video.play.html" />
+    <Content Include="Content\assets\css\responsive.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\css\swiper-bundle.min.css" />
+    <Content Include="Content\assets\fonts-two\flaticonc093.svg" />
+    <Content Include="Content\assets\fonts\boxiconsd41d.svg" />
+    <Content Include="Content\assets\fonts\Flaticon.svg" />
+    <Content Include="Content\assets\images\404.png" />
+    <Content Include="Content\assets\images\about\about-1.png" />
+    <Content Include="Content\assets\images\about\about-2.jpg" />
+    <Content Include="Content\assets\images\about\about-3.jpg" />
+    <Content Include="Content\assets\images\about\about.png" />
+    <Content Include="Content\assets\images\about\choice.png" />
+    <Content Include="Content\assets\images\appointment\appointment-1.jpg" />
+    <Content Include="Content\assets\images\appointment\appointment-2.jpg" />
+    <Content Include="Content\assets\images\appointment\appointment-bg-1.jpg" />
+    <Content Include="Content\assets\images\appointment\appointment-bg-2.jpg" />
+    <Content Include="Content\assets\images\banner-video.mp4" />
+    <Content Include="Content\assets\images\blog-details.jpg" />
+    <Content Include="Content\assets\images\blog\blog-1.jpg" />
+    <Content Include="Content\assets\images\blog\blog-2.jpg" />
+    <Content Include="Content\assets\images\blog\blog-3.jpg" />
+    <Content Include="Content\assets\images\blog\blog-4.jpg" />
+    <Content Include="Content\assets\images\blog\blog-5.jpg" />
+    <Content Include="Content\assets\images\blog\blog-6.jpg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\banner-bg.jpg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\choose.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\choose1.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\choose2.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\choose3.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\choose4.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\google.svg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\quote.svg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\rectangle.jpg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\services1.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\services2.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\services3.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\star.svg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\testimonials1.jpg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\testimonials2.jpg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\testimonials3.jpg" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\user1.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\user2.png" />
+    <Content Include="Content\assets\images\cardiac-care-clinic\user3.png" />
+    <Content Include="Content\assets\images\coming-soon-bg.jpg" />
+    <Content Include="Content\assets\images\covid\about.png" />
+    <Content Include="Content\assets\images\covid\banner.png" />
+    <Content Include="Content\assets\images\covid\block1.jpg" />
+    <Content Include="Content\assets\images\covid\block2.jpg" />
+    <Content Include="Content\assets\images\covid\blog-details.jpg" />
+    <Content Include="Content\assets\images\covid\blog\blog1.jpg" />
+    <Content Include="Content\assets\images\covid\blog\blog2.jpg" />
+    <Content Include="Content\assets\images\covid\blog\blog3.jpg" />
+    <Content Include="Content\assets\images\covid\blog\blog4.jpg" />
+    <Content Include="Content\assets\images\covid\blog\blog5.jpg" />
+    <Content Include="Content\assets\images\covid\blog\blog6.jpg" />
+    <Content Include="Content\assets\images\covid\check-bg.jpg" />
+    <Content Include="Content\assets\images\covid\doctors\doctors1.jpg" />
+    <Content Include="Content\assets\images\covid\doctors\doctors2.jpg" />
+    <Content Include="Content\assets\images\covid\doctors\doctors3.jpg" />
+    <Content Include="Content\assets\images\covid\doctors\doctors4.jpg" />
+    <Content Include="Content\assets\images\covid\doctors\doctors5.jpg" />
+    <Content Include="Content\assets\images\covid\doctors\doctors6.jpg" />
+    <Content Include="Content\assets\images\covid\faq.png" />
+    <Content Include="Content\assets\images\covid\footer-shape.png" />
+    <Content Include="Content\assets\images\covid\fun-fact-bg.jpg" />
+    <Content Include="Content\assets\images\covid\how-vaccines-work.jpg" />
+    <Content Include="Content\assets\images\covid\info1.jpg" />
+    <Content Include="Content\assets\images\covid\info2.jpg" />
+    <Content Include="Content\assets\images\covid\info3.jpg" />
+    <Content Include="Content\assets\images\covid\info4.jpg" />
+    <Content Include="Content\assets\images\covid\information\information1.png" />
+    <Content Include="Content\assets\images\covid\information\information2.png" />
+    <Content Include="Content\assets\images\covid\information\information3.png" />
+    <Content Include="Content\assets\images\covid\information\information4.png" />
+    <Content Include="Content\assets\images\covid\information\information5.png" />
+    <Content Include="Content\assets\images\covid\information\information6.png" />
+    <Content Include="Content\assets\images\covid\page-banner.png" />
+    <Content Include="Content\assets\images\covid\process\process1.png" />
+    <Content Include="Content\assets\images\covid\process\process2.png" />
+    <Content Include="Content\assets\images\covid\process\process3.png" />
+    <Content Include="Content\assets\images\covid\process\process4.png" />
+    <Content Include="Content\assets\images\covid\protection.jpg" />
+    <Content Include="Content\assets\images\covid\registration\registration.png" />
+    <Content Include="Content\assets\images\covid\registration\shape.png" />
+    <Content Include="Content\assets\images\covid\testimonials\img1.png" />
+    <Content Include="Content\assets\images\covid\testimonials\img2.png" />
+    <Content Include="Content\assets\images\covid\testimonials\img3.png" />
+    <Content Include="Content\assets\images\covid\testimonials\img4.png" />
+    <Content Include="Content\assets\images\covid\testimonials\img5.png" />
+    <Content Include="Content\assets\images\covid\testimonials\img6.png" />
+    <Content Include="Content\assets\images\covid\tracker\map.jpg" />
+    <Content Include="Content\assets\images\covid\tracker\tracker1.png" />
+    <Content Include="Content\assets\images\covid\tracker\tracker2.png" />
+    <Content Include="Content\assets\images\covid\tracker\tracker3.png" />
+    <Content Include="Content\assets\images\covid\vaccine\vaccine1.png" />
+    <Content Include="Content\assets\images\covid\vaccine\vaccine2.png" />
+    <Content Include="Content\assets\images\covid\vaccine\vaccine3.png" />
+    <Content Include="Content\assets\images\covid\vaccine\vaccine4.png" />
+    <Content Include="Content\assets\images\dental-tourism\about\about.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\about\certified.png" />
+    <Content Include="Content\assets\images\dental-tourism\appointment\appointment-bg.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\banner\banner-bg.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\blog\blog-1.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\blog\blog-2.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\blog\blog-3.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\choose\choose.png" />
+    <Content Include="Content\assets\images\dental-tourism\dentist\dentist-1.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\dentist\dentist-2.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\dentist\dentist-3.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\features\assistance.png" />
+    <Content Include="Content\assets\images\dental-tourism\features\cost.png" />
+    <Content Include="Content\assets\images\dental-tourism\features\travel.png" />
+    <Content Include="Content\assets\images\dental-tourism\footer\footer-bg.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\logo-bg.png" />
+    <Content Include="Content\assets\images\dental-tourism\review\review-1.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\review\review-2.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\services\services-1.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\services\services-2.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\services\services-3.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\services\services-4.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\services\services-5.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\tourists\colombia.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\tourists\malaysia.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\tourists\mexico.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\tourists\spain.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\tourists\thailand.jpg" />
+    <Content Include="Content\assets\images\dental-tourism\tourists\turkey.jpg" />
+    <Content Include="Content\assets\images\dentist-details-1.jpg" />
+    <Content Include="Content\assets\images\dentist-details-2.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-1.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-2.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-3.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-4.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-5.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-6.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-7.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-8.jpg" />
+    <Content Include="Content\assets\images\doctor\doctor-9.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\about.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\app-store.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\banner1.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\banner2.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\banner3.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\blog1.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\blog2.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\blog3.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\global-network.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\google-play.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\heartbreak.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital1.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital2.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital3.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital4.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital5.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\hospital6.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\human-brain.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\lungs.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\message.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\ointment.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\pin.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\profile.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\quote.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\siren.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\success.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\team1.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\team2.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\team3.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\team4.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\testimonials-bg.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\testimonials1.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\testimonials2.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\time.svg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\tips.jpg" />
+    <Content Include="Content\assets\images\emergency-trauma-care\user-group.png" />
+    <Content Include="Content\assets\images\emergency-trauma-care\user.png" />
+    <Content Include="Content\assets\images\eye-care\about\about.png" />
+    <Content Include="Content\assets\images\eye-care\banner\banner.jpg" />
+    <Content Include="Content\assets\images\eye-care\features\features-1.png" />
+    <Content Include="Content\assets\images\eye-care\features\features-2.png" />
+    <Content Include="Content\assets\images\eye-care\features\features-3.png" />
+    <Content Include="Content\assets\images\eye-care\services\services-bg.jpg" />
+    <Content Include="Content\assets\images\eye-care\solutions\solutions.png" />
+    <Content Include="Content\assets\images\eye-care\team\team-1.jpg" />
+    <Content Include="Content\assets\images\eye-care\team\team-2.jpg" />
+    <Content Include="Content\assets\images\eye-care\team\team-3.jpg" />
+    <Content Include="Content\assets\images\eye-care\testimonials\image-1.jpg" />
+    <Content Include="Content\assets\images\eye-care\testimonials\image-2.jpg" />
+    <Content Include="Content\assets\images\eye-care\testimonials\image-3.jpg" />
+    <Content Include="Content\assets\images\eye-care\testimonials\testimonials.jpg" />
+    <Content Include="Content\assets\images\eye-care\treatment\treatment.png" />
+    <Content Include="Content\assets\images\favicon.png" />
+    <Content Include="Content\assets\images\flags%402x.png" />
+    <Content Include="Content\assets\images\flags.png" />
+    <Content Include="Content\assets\images\footer-bg.jpg" />
+    <Content Include="Content\assets\images\footer\footer-1.jpg" />
+    <Content Include="Content\assets\images\footer\footer-2.jpg" />
+    <Content Include="Content\assets\images\footer\footer-3.jpg" />
+    <Content Include="Content\assets\images\footer\footer-4.jpg" />
+    <Content Include="Content\assets\images\footer\signature.png" />
+    <Content Include="Content\assets\images\gallery\gallery-1.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-2.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-3.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-4.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-5.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-6.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-7.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-8.jpg" />
+    <Content Include="Content\assets\images\gallery\gallery-9.jpg" />
+    <Content Include="Content\assets\images\hospital\about-shape.png" />
+    <Content Include="Content\assets\images\hospital\about.png" />
+    <Content Include="Content\assets\images\hospital\appointment-bg.jpg" />
+    <Content Include="Content\assets\images\hospital\appointment.png" />
+    <Content Include="Content\assets\images\hospital\app\app1.png" />
+    <Content Include="Content\assets\images\hospital\app\app2.png" />
+    <Content Include="Content\assets\images\hospital\app\img1.png" />
+    <Content Include="Content\assets\images\hospital\app\img2.png" />
+    <Content Include="Content\assets\images\hospital\app\img3.png" />
+    <Content Include="Content\assets\images\hospital\app\img4.png" />
+    <Content Include="Content\assets\images\hospital\app\main.png" />
+    <Content Include="Content\assets\images\hospital\banner\banner-bg.jpg" />
+    <Content Include="Content\assets\images\hospital\banner\main.png" />
+    <Content Include="Content\assets\images\hospital\blog-details\blog-details1.jpg" />
+    <Content Include="Content\assets\images\hospital\blog-details\blog-details2.jpg" />
+    <Content Include="Content\assets\images\hospital\blog-details\double-quote.svg" />
+    <Content Include="Content\assets\images\hospital\blog\blog1.jpg" />
+    <Content Include="Content\assets\images\hospital\blog\blog2.jpg" />
+    <Content Include="Content\assets\images\hospital\blog\blog3.jpg" />
+    <Content Include="Content\assets\images\hospital\blog\blog4.jpg" />
+    <Content Include="Content\assets\images\hospital\blog\blog5.jpg" />
+    <Content Include="Content\assets\images\hospital\blog\blog6.jpg" />
+    <Content Include="Content\assets\images\hospital\call-to-action.jpg" />
+    <Content Include="Content\assets\images\hospital\choice.png" />
+    <Content Include="Content\assets\images\hospital\doc.png" />
+    <Content Include="Content\assets\images\hospital\footer-bg.jpg" />
+    <Content Include="Content\assets\images\hospital\fun-fact\fun-facts-bg.jpg" />
+    <Content Include="Content\assets\images\hospital\fun-fact\img1.png" />
+    <Content Include="Content\assets\images\hospital\fun-fact\img2.png" />
+    <Content Include="Content\assets\images\hospital\fun-fact\img3.png" />
+    <Content Include="Content\assets\images\hospital\fun-fact\img4.png" />
+    <Content Include="Content\assets\images\hospital\info-shape.png" />
+    <Content Include="Content\assets\images\hospital\information\info.png" />
+    <Content Include="Content\assets\images\hospital\information\information-bg.jpg" />
+    <Content Include="Content\assets\images\hospital\page-banner\bg-1.jpg" />
+    <Content Include="Content\assets\images\hospital\page-banner\bg-2.jpg" />
+    <Content Include="Content\assets\images\hospital\page-banner\bg-3.jpg" />
+    <Content Include="Content\assets\images\hospital\page-banner\bg-4.jpg" />
+    <Content Include="Content\assets\images\hospital\pdf.png" />
+    <Content Include="Content\assets\images\hospital\portfolio-details\portfolio-details1.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio-details\portfolio-details2.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio-details\portfolio-details3.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio1.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio2.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio3.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio4.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio5.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio6.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio7.jpg" />
+    <Content Include="Content\assets\images\hospital\portfolio\portfolio8.jpg" />
+    <Content Include="Content\assets\images\hospital\services-details\services-details1.jpg" />
+    <Content Include="Content\assets\images\hospital\services-details\services-details2.jpg" />
+    <Content Include="Content\assets\images\hospital\services-info.jpg" />
+    <Content Include="Content\assets\images\hospital\services\img1.png" />
+    <Content Include="Content\assets\images\hospital\services\img2.png" />
+    <Content Include="Content\assets\images\hospital\services\img3.png" />
+    <Content Include="Content\assets\images\hospital\services\img4.png" />
+    <Content Include="Content\assets\images\hospital\services\img5.png" />
+    <Content Include="Content\assets\images\hospital\services\img6.png" />
+    <Content Include="Content\assets\images\hospital\services\img7.png" />
+    <Content Include="Content\assets\images\hospital\services\img8.png" />
+    <Content Include="Content\assets\images\hospital\skill.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img1.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img2.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img3.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img4.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img5.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img6.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img7.png" />
+    <Content Include="Content\assets\images\hospital\specialist\img8.png" />
+    <Content Include="Content\assets\images\hospital\team\team1.jpg" />
+    <Content Include="Content\assets\images\hospital\team\team2.jpg" />
+    <Content Include="Content\assets\images\hospital\team\team3.jpg" />
+    <Content Include="Content\assets\images\hospital\team\team4.jpg" />
+    <Content Include="Content\assets\images\hospital\team\team5.jpg" />
+    <Content Include="Content\assets\images\hospital\team\team6.jpg" />
+    <Content Include="Content\assets\images\hospital\testimonials\hover-icon.png" />
+    <Content Include="Content\assets\images\hospital\testimonials\icon.png" />
+    <Content Include="Content\assets\images\hospital\testimonials\img1.jpg" />
+    <Content Include="Content\assets\images\hospital\testimonials\img2.jpg" />
+    <Content Include="Content\assets\images\logo-2.png" />
+    <Content Include="Content\assets\images\logo.png" />
+    <Content Include="Content\assets\images\main-banner-1.jpg" />
+    <Content Include="Content\assets\images\main-slides\slides-bg1.jpg" />
+    <Content Include="Content\assets\images\main-slides\slides-bg2.jpg" />
+    <Content Include="Content\assets\images\main-slides\slides-bg3.jpg" />
+    <Content Include="Content\assets\images\main-slides\slides-bg4.jpg" />
+    <Content Include="Content\assets\images\main-slides\slides-bg5.jpg" />
+    <Content Include="Content\assets\images\main-slides\slides-bg6.jpg" />
+    <Content Include="Content\assets\images\maternity-clinic\about.png" />
+    <Content Include="Content\assets\images\maternity-clinic\banner-bg.jpg" />
+    <Content Include="Content\assets\images\maternity-clinic\blog1.png" />
+    <Content Include="Content\assets\images\maternity-clinic\blog2.png" />
+    <Content Include="Content\assets\images\maternity-clinic\blog3.png" />
+    <Content Include="Content\assets\images\maternity-clinic\blog4.png" />
+    <Content Include="Content\assets\images\maternity-clinic\blog5.png" />
+    <Content Include="Content\assets\images\maternity-clinic\blog6.png" />
+    <Content Include="Content\assets\images\maternity-clinic\choose1.png" />
+    <Content Include="Content\assets\images\maternity-clinic\choose2.png" />
+    <Content Include="Content\assets\images\maternity-clinic\choose3.png" />
+    <Content Include="Content\assets\images\maternity-clinic\choose4.png" />
+    <Content Include="Content\assets\images\maternity-clinic\features1.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\features2.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\features3.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\left.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\line.png" />
+    <Content Include="Content\assets\images\maternity-clinic\overview1.png" />
+    <Content Include="Content\assets\images\maternity-clinic\overview2.png" />
+    <Content Include="Content\assets\images\maternity-clinic\overview3.png" />
+    <Content Include="Content\assets\images\maternity-clinic\overview4.png" />
+    <Content Include="Content\assets\images\maternity-clinic\phone.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\quote.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\right.svg" />
+    <Content Include="Content\assets\images\maternity-clinic\services1.png" />
+    <Content Include="Content\assets\images\maternity-clinic\services2.png" />
+    <Content Include="Content\assets\images\maternity-clinic\services3.png" />
+    <Content Include="Content\assets\images\maternity-clinic\services4.png" />
+    <Content Include="Content\assets\images\maternity-clinic\user1.png" />
+    <Content Include="Content\assets\images\maternity-clinic\user2.png" />
+    <Content Include="Content\assets\images\maternity-clinic\user3.png" />
+    <Content Include="Content\assets\images\maternity-clinic\user4.png" />
+    <Content Include="Content\assets\images\night.png" />
+    <Content Include="Content\assets\images\orthopedic-care\ambulance.png" />
+    <Content Include="Content\assets\images\orthopedic-care\app-store.png" />
+    <Content Include="Content\assets\images\orthopedic-care\appointment-bg.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\banner.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\bionic-leg.png" />
+    <Content Include="Content\assets\images\orthopedic-care\blog1.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\blog2.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\blog3.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\cardiologist.png" />
+    <Content Include="Content\assets\images\orthopedic-care\crutch.png" />
+    <Content Include="Content\assets\images\orthopedic-care\faq.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\features1.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\features2.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\features3.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\features4.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\femoral.png" />
+    <Content Include="Content\assets\images\orthopedic-care\google-play.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\hand.png" />
+    <Content Include="Content\assets\images\orthopedic-care\juggling.png" />
+    <Content Include="Content\assets\images\orthopedic-care\message.svg" />
+    <Content Include="Content\assets\images\orthopedic-care\partner1.png" />
+    <Content Include="Content\assets\images\orthopedic-care\partner2.png" />
+    <Content Include="Content\assets\images\orthopedic-care\partner3.png" />
+    <Content Include="Content\assets\images\orthopedic-care\partner4.png" />
+    <Content Include="Content\assets\images\orthopedic-care\partner5.png" />
+    <Content Include="Content\assets\images\orthopedic-care\pin.png" />
+    <Content Include="Content\assets\images\orthopedic-care\quote.svg" />
+    <Content Include="Content\assets\images\orthopedic-care\services-shape.png" />
+    <Content Include="Content\assets\images\orthopedic-care\sun.png" />
+    <Content Include="Content\assets\images\orthopedic-care\team1.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\team2.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\team3.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\team4.jpg" />
+    <Content Include="Content\assets\images\orthopedic-care\time.svg" />
+    <Content Include="Content\assets\images\orthopedic-care\user-group.png" />
+    <Content Include="Content\assets\images\orthopedic-care\user.svg" />
+    <Content Include="Content\assets\images\orthopedic-care\user1.png" />
+    <Content Include="Content\assets\images\orthopedic-care\user2.png" />
+    <Content Include="Content\assets\images\overview.png" />
+    <Content Include="Content\assets\images\page-banner.jpg" />
+    <Content Include="Content\assets\images\Products\Product-1.jpg" />
+    <Content Include="Content\assets\images\Products\Product-2.jpg" />
+    <Content Include="Content\assets\images\Products\Product-3.jpg" />
+    <Content Include="Content\assets\images\Products\Product-4.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\about.mp4" />
+    <Content Include="Content\assets\images\rehabilitation-center\blog1.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\blog2.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\blog3.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\hospital.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\hospital.svg" />
+    <Content Include="Content\assets\images\rehabilitation-center\offer1.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\offer2.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\offer3.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\offer4.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\overview1.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\overview2.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\physiotherapy.svg" />
+    <Content Include="Content\assets\images\rehabilitation-center\slider-bg1.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\slider-bg2.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\slider-bg3.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\slider-bg4.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\treatment-plans.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\work1.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\work2.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\work3.jpg" />
+    <Content Include="Content\assets\images\rehabilitation-center\wrap1.png" />
+    <Content Include="Content\assets\images\rehabilitation-center\wrap2.png" />
+    <Content Include="Content\assets\images\review\review-1.jpg" />
+    <Content Include="Content\assets\images\review\review-2.jpg" />
+    <Content Include="Content\assets\images\review\review-3.jpg" />
+    <Content Include="Content\assets\images\review\review-4.jpg" />
+    <Content Include="Content\assets\images\review\review-5.jpg" />
+    <Content Include="Content\assets\images\review\review-6.jpg" />
+    <Content Include="Content\assets\images\rth\about.png" />
+    <Content Include="Content\assets\images\rth\banner-video.mp4" />
+    <Content Include="Content\assets\images\rth\blog1.jpg" />
+    <Content Include="Content\assets\images\rth\blog2.jpg" />
+    <Content Include="Content\assets\images\rth\blog3.jpg" />
+    <Content Include="Content\assets\images\rth\cardiologist.png" />
+    <Content Include="Content\assets\images\rth\career-development.svg" />
+    <Content Include="Content\assets\images\rth\education-training.jpg" />
+    <Content Include="Content\assets\images\rth\first-aid.svg" />
+    <Content Include="Content\assets\images\rth\footer-bg.jpg" />
+    <Content Include="Content\assets\images\rth\hospital.png" />
+    <Content Include="Content\assets\images\rth\man.png" />
+    <Content Include="Content\assets\images\rth\medical-book.png" />
+    <Content Include="Content\assets\images\rth\pin.png" />
+    <Content Include="Content\assets\images\rth\research1.jpg" />
+    <Content Include="Content\assets\images\rth\research2.jpg" />
+    <Content Include="Content\assets\images\rth\research3.jpg" />
+    <Content Include="Content\assets\images\rth\research4.jpg" />
+    <Content Include="Content\assets\images\rth\services-shape1.png" />
+    <Content Include="Content\assets\images\rth\services-shape2.png" />
+    <Content Include="Content\assets\images\rth\services1.jpg" />
+    <Content Include="Content\assets\images\rth\services2.jpg" />
+    <Content Include="Content\assets\images\rth\services3.jpg" />
+    <Content Include="Content\assets\images\rth\services4.jpg" />
+    <Content Include="Content\assets\images\rth\services6.jpg" />
+    <Content Include="Content\assets\images\rth\team1.jpg" />
+    <Content Include="Content\assets\images\rth\team2.jpg" />
+    <Content Include="Content\assets\images\rth\team3.jpg" />
+    <Content Include="Content\assets\images\rth\team4.jpg" />
+    <Content Include="Content\assets\images\rth\user1.png" />
+    <Content Include="Content\assets\images\rth\user2.png" />
+    <Content Include="Content\assets\images\rth\user3.png" />
+    <Content Include="Content\assets\images\rth\user4.png" />
+    <Content Include="Content\assets\images\rth\user5.png" />
+    <Content Include="Content\assets\images\rth\vector.png" />
+    <Content Include="Content\assets\images\rth\vector2.png" />
+    <Content Include="Content\assets\images\rth\vector3.png" />
+    <Content Include="Content\assets\images\rth\vector4.png" />
+    <Content Include="Content\assets\images\rth\vector5.png" />
+    <Content Include="Content\assets\images\rth\vector6.png" />
+    <Content Include="Content\assets\images\rth\vector7.png" />
+    <Content Include="Content\assets\images\rth\vector8.png" />
+    <Content Include="Content\assets\images\rth\vector9.png" />
+    <Content Include="Content\assets\images\rth\vendor.svg" />
+    <Content Include="Content\assets\images\rth\woman.png" />
+    <Content Include="Content\assets\images\services-details.jpg" />
+    <Content Include="Content\assets\images\services-details2.jpg" />
+    <Content Include="Content\assets\images\services-details3.jpg" />
+    <Content Include="Content\assets\images\services\services-1.jpg" />
+    <Content Include="Content\assets\images\services\services-2.jpg" />
+    <Content Include="Content\assets\images\services\services-3.jpg" />
+    <Content Include="Content\assets\images\services\services-4.jpg" />
+    <Content Include="Content\assets\images\services\services-5.jpg" />
+    <Content Include="Content\assets\images\services\services-6.jpg" />
+    <Content Include="Content\assets\images\services\services-7.jpg" />
+    <Content Include="Content\assets\images\services\services-8.jpg" />
+    <Content Include="Content\assets\images\shop\1.jpg" />
+    <Content Include="Content\assets\images\shop\shop1.jpg" />
+    <Content Include="Content\assets\images\shop\shop2.jpg" />
+    <Content Include="Content\assets\images\shop\shop3.jpg" />
+    <Content Include="Content\assets\images\shop\shop4.jpg" />
+    <Content Include="Content\assets\images\shop\shop5.jpg" />
+    <Content Include="Content\assets\images\shop\shop6.jpg" />
+    <Content Include="Content\assets\images\shop\shop7.jpg" />
+    <Content Include="Content\assets\images\shop\shop8.jpg" />
+    <Content Include="Content\assets\images\skin-care\about\about.jpg" />
+    <Content Include="Content\assets\images\skin-care\appointment\appointment.jpg" />
+    <Content Include="Content\assets\images\skin-care\banner\banner.png" />
+    <Content Include="Content\assets\images\skin-care\banner\shape.png" />
+    <Content Include="Content\assets\images\skin-care\before-after\before-after-1.jpg" />
+    <Content Include="Content\assets\images\skin-care\before-after\before-after-2.jpg" />
+    <Content Include="Content\assets\images\skin-care\before-after\before-after-3.jpg" />
+    <Content Include="Content\assets\images\skin-care\blog\blog-1.jpg" />
+    <Content Include="Content\assets\images\skin-care\blog\blog-2.jpg" />
+    <Content Include="Content\assets\images\skin-care\blog\blog-3.jpg" />
+    <Content Include="Content\assets\images\skin-care\dry\dry.png" />
+    <Content Include="Content\assets\images\skin-care\dry\image-1.jpg" />
+    <Content Include="Content\assets\images\skin-care\dry\image-2.jpg" />
+    <Content Include="Content\assets\images\skin-care\dry\image-3.jpg" />
+    <Content Include="Content\assets\images\skin-care\features\medical-doctor.png" />
+    <Content Include="Content\assets\images\skin-care\features\medical-tool.png" />
+    <Content Include="Content\assets\images\skin-care\features\microscope.png" />
+    <Content Include="Content\assets\images\skin-care\partner\partner-1.png" />
+    <Content Include="Content\assets\images\skin-care\partner\partner-2.png" />
+    <Content Include="Content\assets\images\skin-care\partner\partner-3.png" />
+    <Content Include="Content\assets\images\skin-care\partner\partner-4.png" />
+    <Content Include="Content\assets\images\skin-care\partner\partner-5.png" />
+    <Content Include="Content\assets\images\skin-care\review\review-1.jpg" />
+    <Content Include="Content\assets\images\skin-care\review\review-2.jpg" />
+    <Content Include="Content\assets\images\skin-care\review\review-3.jpg" />
+    <Content Include="Content\assets\images\skin-care\services\services-1.jpg" />
+    <Content Include="Content\assets\images\skin-care\services\services-2.jpg" />
+    <Content Include="Content\assets\images\skin-care\services\services-3.jpg" />
+    <Content Include="Content\assets\images\skin-care\services\services-4.jpg" />
+    <Content Include="Content\assets\images\skin-care\services\services-5.jpg" />
+    <Content Include="Content\assets\images\skin-care\services\services-6.jpg" />
+    <Content Include="Content\assets\images\sunny.png" />
+    <Content Include="Content\assets\images\tvc\about1.png" />
+    <Content Include="Content\assets\images\tvc\about2.png" />
+    <Content Include="Content\assets\images\tvc\banner-bg.jpg" />
+    <Content Include="Content\assets\images\tvc\banner.png" />
+    <Content Include="Content\assets\images\tvc\blog1.jpg" />
+    <Content Include="Content\assets\images\tvc\blog2.jpg" />
+    <Content Include="Content\assets\images\tvc\blog3.jpg" />
+    <Content Include="Content\assets\images\tvc\consulting.svg" />
+    <Content Include="Content\assets\images\tvc\faq.jpg" />
+    <Content Include="Content\assets\images\tvc\man.png" />
+    <Content Include="Content\assets\images\tvc\quote.svg" />
+    <Content Include="Content\assets\images\tvc\services1.jpg" />
+    <Content Include="Content\assets\images\tvc\services2.jpg" />
+    <Content Include="Content\assets\images\tvc\signup.svg" />
+    <Content Include="Content\assets\images\tvc\stethoscope.svg" />
+    <Content Include="Content\assets\images\tvc\team1.jpg" />
+    <Content Include="Content\assets\images\tvc\team2.jpg" />
+    <Content Include="Content\assets\images\tvc\team3.jpg" />
+    <Content Include="Content\assets\images\tvc\team4.jpg" />
+    <Content Include="Content\assets\images\tvc\team5.jpg" />
+    <Content Include="Content\assets\images\tvc\team6.jpg" />
+    <Content Include="Content\assets\images\tvc\team7.jpg" />
+    <Content Include="Content\assets\images\tvc\team8.jpg" />
+    <Content Include="Content\assets\images\tvc\telemedicine.jpg" />
+    <Content Include="Content\assets\images\tvc\testimonial.mp4" />
+    <Content Include="Content\assets\images\tvc\trusted1.png" />
+    <Content Include="Content\assets\images\tvc\trusted2.png" />
+    <Content Include="Content\assets\images\tvc\trusted3.png" />
+    <Content Include="Content\assets\images\tvc\trusted4.png" />
+    <Content Include="Content\assets\images\tvc\trusted5.png" />
+    <Content Include="Content\assets\images\tvc\user1.png" />
+    <Content Include="Content\assets\images\tvc\user2.png" />
+    <Content Include="Content\assets\images\tvc\user3.png" />
+    <Content Include="Content\assets\images\tvc\user4.png" />
+    <Content Include="Content\assets\images\tvc\user5.png" />
+    <Content Include="Content\assets\images\tvc\woman.png" />
+    <Content Include="Content\assets\images\user\user1.jpg" />
+    <Content Include="Content\assets\images\user\user2.jpg" />
+    <Content Include="Content\assets\images\user\user3.jpg" />
+    <Content Include="Content\assets\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\assets\js\contact-form-script.js" />
+    <Content Include="Content\assets\js\countrySelect.min.js" />
+    <Content Include="Content\assets\js\form-validator.min.js" />
+    <Content Include="Content\assets\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Content\assets\js\jquery.appear.js" />
+    <Content Include="Content\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\assets\js\jquery.meanmenu.js" />
+    <Content Include="Content\assets\js\jquery.min.js" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\nice-select.min.js" />
+    <Content Include="Content\assets\js\odometer.min.js" />
+    <Content Include="Content\assets\js\owl.carousel.min.js" />
+    <Content Include="Content\assets\js\swiper-bundle.min.js" />
+    <Content Include="Content\assets\js\wow.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\assets\fonts-two\flaticonc093.eot" />
+    <Content Include="Content\assets\fonts-two\flaticonc093.ttf" />
+    <Content Include="Content\assets\fonts-two\flaticonc093.woff" />
+    <Content Include="Content\assets\fonts-two\flaticonc093.woff2" />
+    <Content Include="Content\assets\fonts\boxicons.eot" />
+    <Content Include="Content\assets\fonts\boxicons.ttf" />
+    <Content Include="Content\assets\fonts\boxicons.woff" />
+    <Content Include="Content\assets\fonts\boxicons.woff2" />
+    <Content Include="Content\assets\fonts\Flaticon.eot" />
+    <Content Include="Content\assets\fonts\Flaticon.ttf" />
+    <Content Include="Content\assets\fonts\Flaticon.woff" />
+    <Content Include="Content\assets\fonts\Flaticon.woff2" />
+    <Content Include="Content\assets\fonts\Flaticond41d.eot" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\PrivacyPolicy.cshtml" />
+    <Content Include="Views\Home\Terms.cshtml" />
+    <Content Include="Views\Home\DisplayData.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10616</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44304/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

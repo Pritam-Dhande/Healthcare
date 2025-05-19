@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Display Data";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Page Banner -->
+<div class="page-banner-area">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2 class="text-white">Display Data</h2>
+
+            <ul class="pages-list">
+                <li><a href="index.html">Home</a></li>
+                <li>Display Data</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Banner -->
+<!-- Start Privacy Policy Area -->
+<section class="privacy-policy-area ptb-100">
+    <div class="container">
+        <div class="single-privacy-policy">
+            <h3>Contact Form Data</h3>
+            <table class="table table-bordered" id="contactData">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Date Time</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="single-privacy-policy">
+            <h3>Enquiry Form Data</h3>
+            <table class="table table-bordered" id="enquiryData">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Date Time</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Product</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- End Privacy Policy Area -->
+
+@section Scripts {
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '/Home/GetContacts', // Replace with your actual controller name
+                type: 'GET',
+                success: function (data) {
+                    var tbody = $("#contactData tbody");
+                    tbody.empty(); // Clear any previous data
+
+                    $.each(data, function (i, enquiry) {
+                        var row = "<tr>" +
+                            "<td>" + enquiry.id + "</td>" +
+                            "<td>" + enquiry.ContactDate + "</td>" +
+                            "<td>" + enquiry.Name + "</td>" +
+                            "<td>" + enquiry.Email + "</td>" +
+                            "<td>" + enquiry.Message + "</td>" +
+                            "</tr>";
+                        tbody.append(row);
+                    });
+                },
+                error: function () {
+                    alert("Failed to load contact data.");
+                }
+            });
+        });
+        $(document).ready(function () {
+            $.ajax({
+                url: '/Home/GetEnquiries', // Replace with your actual controller name
+                type: 'GET',
+                success: function (data) {
+                    var tbody = $("#enquiryData tbody");
+                    tbody.empty(); // Clear any previous data
+
+                    $.each(data, function (i, enquiry) {
+                        var row = "<tr>" +
+                            "<td>" + enquiry.id + "</td>" +
+                            "<td>" + enquiry.EnquiryDate + "</td>" +
+                            "<td>" + enquiry.FullName + "</td>" +
+                            "<td>" + enquiry.Email + "</td>" +
+                            "<td>" + enquiry.MobileNumber + "</td>" +
+                            "<td>" + enquiry.Product + "</td>" +
+                            "<td>" + enquiry.Message + "</td>" +
+                            "</tr>";
+                        tbody.append(row);
+                    });
+                },
+                error: function () {
+                    alert("Failed to load enquiry data.");
+                }
+            });
+        });
+    </script>
+    }
