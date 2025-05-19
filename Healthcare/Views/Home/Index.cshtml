@@ -17,7 +17,6 @@
     </style>
 }
 
-<!-- Start Rehabilitation Center Slider Area -->
 <div id="home" class="rehabilitation-center-slider-area">
     <div class="swiper rehabilitation-center-slider">
         <div class="swiper-wrapper">
@@ -33,12 +32,6 @@
                                         <i class='bx bx-right-arrow-alt'></i>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#contactus" class="default-btn2">
-                                        <i class='bx bxs-phone'></i>
-                                        <span>Contact Us</span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -47,8 +40,7 @@
         </div>
     </div>
 </div>
-<!-- End Rehabilitation Center Slider Area -->
-<!-- Start Shop Area -->
+
 <div id="products" class="shop-area pt-100 pb-100">
     <div class="container">
         <div class="section-title title-optional-wrap text-center">
@@ -138,8 +130,7 @@
         </div>
     </div>
 </div>
-<!-- End Shop Area -->
-<!-- Start About Area -->
+
 <section id="aboutus" class="about-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
@@ -195,7 +186,7 @@
 
                     <div class="row">
                         <div class="col-lg-12 col-md-6">
-                            <div class="about-info p-lg-0">
+                            <div class="mt-4 p-lg-0">
                                 <h5>Our mission</h5>
                                 <p>
                                     To empower healthcare organizations with innovative, secure, and intelligent technology
@@ -216,8 +207,7 @@
         </div>
     </div>
 </section>
-<!-- End About Area -->
-<!-- Start RC Contact Area -->
+
 <div id="contactus" class="rc-contact-area ptb-100">
     <div class="container">
         <div class="row justify-content-center align-items-center g-5">
@@ -275,7 +265,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12">
                             <button type="submit" class="default-btn2">
-                                <i class='bx bxs-calendar'></i>
+                                <i class='bx bxs-message'></i>
                                 <span>Send Details</span>
                             </button>
                         </div>
@@ -285,8 +275,7 @@
         </div>
     </div>
 </div>
-<!-- End RC Contact Area -->
-<!-- Start Contact Area -->
+
 <section class="contact-area ptb-100">
     <div class="container">
         <div class="section-title">
@@ -294,8 +283,7 @@
                 <i class="flaticon-hashtag-symbol"></i>
                 Enquiry Now
             </span>
-            <h2>Drop Us Message for Any Query</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+            <h2>Drop Us Message for Any Enquiry</h2>
         </div>
 
         <div class="contact-form">
@@ -336,7 +324,7 @@
                                 new { Value = "Hospital Information System", Text = "Hospital Information System" },
                                 new { Value = "Mobile App Development", Text = "Mobile App Development" }
                             }, "Value", "Text"),
-                            new { @class = "form-control" })
+                            new { @class = "form-control pt-0" })
                             @Html.ValidationMessageFor(m => m.EnquiryForm.Product, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -350,7 +338,7 @@
 
                     <div class="col-lg-12 mt-2">
                         <button type="submit" class="default-btn2">
-                            <i class='bx bxs-calendar'></i>
+                            <i class='bx bxs-message'></i>
                             <span>Send Message</span>
                         </button>
                       
@@ -362,8 +350,7 @@
 
     </div>
 </section>
-<!-- End Contact Area -->
- 
+
 @section Scripts {
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
@@ -386,7 +373,6 @@
                             $("#frmContactForm")[0].reset();
                         } else {
                             $("#result").html("<div style='color:red'>All fields are required.</div>");
-                            // Optional: display server-side validation errors (already handled by MVC client-side by default)
                         }
                     },
                     error: function () {
@@ -411,7 +397,6 @@
                             $("#frmEnquiryForm")[0].reset();
                         } else {
                             $("#result-enq").html("<div style='color:red'>All fields are required.</div>");
-                            // Optional: display server-side validation errors (already handled by MVC client-side by default)
                         }
                     },
                     error: function () {

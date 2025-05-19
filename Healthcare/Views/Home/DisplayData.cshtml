@@ -4,7 +4,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Start Page Banner -->
 <div class="page-banner-area">
     <div class="container">
         <div class="page-banner-content">
@@ -17,8 +16,7 @@
         </div>
     </div>
 </div>
-<!-- End Page Banner -->
-<!-- Start Privacy Policy Area -->
+
 <section class="privacy-policy-area ptb-100">
     <div class="container">
         <div class="single-privacy-policy">
@@ -73,7 +71,6 @@
         </div>
     </div>
 </section>
-<!-- End Privacy Policy Area -->
 
 @section Scripts {
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
@@ -81,11 +78,11 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: '/Home/GetContacts', // Replace with your actual controller name
+                url: '/Home/GetContacts', 
                 type: 'GET',
                 success: function (data) {
                     var tbody = $("#contactData tbody");
-                    tbody.empty(); // Clear any previous data
+                    tbody.empty(); 
 
                     $.each(data, function (i, enquiry) {
                         var row = "<tr>" +
@@ -105,11 +102,11 @@
         });
         $(document).ready(function () {
             $.ajax({
-                url: '/Home/GetEnquiries', // Replace with your actual controller name
+                url: '/Home/GetEnquiries', 
                 type: 'GET',
                 success: function (data) {
                     var tbody = $("#enquiryData tbody");
-                    tbody.empty(); // Clear any previous data
+                    tbody.empty(); 
 
                     $.each(data, function (i, enquiry) {
                         var row = "<tr>" +
