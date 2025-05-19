@@ -1,5 +1,5 @@
 Hello Kritika Ma’am,
-I have completed the development of the Healthcare web application using the C# ASP.NET MVC Framework, as per the assigned task.
+I have completed the development of the Healthcare IT Company web page using the C# (ASP.NET) MVC Framework, as per the assigned task.
 The project has been uploaded to GitHub and is accessible via the following link:
 GitHub Link to the Project:
 https://github.com/Pritam-Dhande/Healthcare/tree/master
@@ -10,7 +10,11 @@ How to Run the Project:
 3.	Extract the ZIP file to your preferred location.
 4.	Open the project using Visual Studio.
 5.	Restore dependencies and run the application.
-
+Technical Stack Used:
+•	Frontend: HTML5, CSS3, JavaScript, Bootstrap (for responsiveness)
+•	Backend: ASP.NET MVC (C#)
+•	Form Handling: AJAX-based submission and JSON storage
+•	Codebase: Hosted on GitHub with clear folder structure and instructions
 Features Implemented:
 •	The Contact Form and Enquiry Form are fully functional.
 •	You can test the forms by submitting some sample data.
@@ -21,4 +25,3 @@ Best regards,
 Pritam Dhande
 +91 7758036768
 pritamdhande11@gmail.com
-
